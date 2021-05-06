@@ -2,7 +2,7 @@ package io.github.zuneho.bookingboot.web.dto;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 class HelloResponseDtoTest {
@@ -17,7 +17,7 @@ class HelloResponseDtoTest {
         HelloResponseDto responseDto = new HelloResponseDto(name, amount);
 
         //then
-        assertEquals(name, responseDto.getName());
-        assertEquals(amount, responseDto.getAmount());
+        assertThat(responseDto.getName()).isEqualTo(name);
+        assertThat(responseDto.getAmount()).isEqualTo(amount);
     }
 }
